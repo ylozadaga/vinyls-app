@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.main.ArtistActivity">
+
+    <Button
+        android:id="@+id/buttonGoToArtistsGuest"
+        android:layout_width="155dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="128dp"
+        android:layout_marginTop="72dp"
+        android:layout_marginEnd="128dp"
+        android:background="#4E5467"
+        android:text="Artistas"
+        android:textAlignment="center"
+        android:textColor="@color/fontTextNormal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonGoToAlbumsGuest" />
+
+    <Button
+        android:id="@+id/buttonGoToColleccionistsGuest"
+        android:layout_width="155dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="128dp"
+        android:layout_marginTop="72dp"
+        android:layout_marginEnd="128dp"
+        android:background="#4E5467"
+        android:text="Colecionistas"
+        android:textAlignment="center"
+        android:textColor="@color/fontTextNormal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonGoToArtistsGuest" />
+
+    <Button
+        android:id="@+id/buttonGoToAlbumsGuest"
+        android:layout_width="155dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="128dp"
+        android:layout_marginTop="157dp"
+        android:layout_marginEnd="128dp"
+        android:background="#4E5467"
+        android:text="Albumes"
+        android:textAlignment="center"
+        android:textColor="@color/fontTextNormal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
