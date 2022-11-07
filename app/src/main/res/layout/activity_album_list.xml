@@ -5,7 +5,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".view.FragmentAlbumList"
+    tools:context="com.example.vinyls.view.FragmentAlbumList"
     android:layout_marginTop="0dp"
     android:layout_marginStart="0dp"
     android:background="@color/background_general"
