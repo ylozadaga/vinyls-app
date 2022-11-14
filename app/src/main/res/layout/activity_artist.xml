@@ -18,7 +18,8 @@
         android:src="@drawable/arrow"
 
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="ContentDescription" />
 
     <ImageView
         android:id="@+id/imAlbumes"
@@ -28,7 +29,8 @@
         android:layout_marginStart="132dp"
         android:layout_marginTop="16dp"
         android:src="@drawable/albumes"
-        tools:ignore="MissingConstraints" />
+        tools:ignore="ContentDescription,MissingConstraints"
+         />
 
     <Button
         android:id="@+id/buttonGoToArtistsGuest"
@@ -38,7 +40,7 @@
         android:layout_marginTop="72dp"
         android:layout_marginEnd="128dp"
         android:background="#4E5467"
-        android:text="Artistas"
+        android:text="@string/text_artista"
         android:textAlignment="center"
         android:textColor="@color/fontTextNormal"
         app:layout_constraintEnd_toEndOf="parent"
@@ -54,7 +56,7 @@
         android:layout_marginTop="72dp"
         android:layout_marginEnd="128dp"
         android:background="#4E5467"
-        android:text="Colecionistas"
+        android:text="@string/texto_coleccionista"
         android:textAlignment="center"
         android:textColor="@color/fontTextNormal"
         app:layout_constraintEnd_toEndOf="parent"
@@ -70,7 +72,7 @@
         android:layout_marginTop="157dp"
         android:layout_marginEnd="128dp"
         android:background="#4E5467"
-        android:text="Albumes"
+        android:text="@string/text_album"
         android:textAlignment="center"
         android:textColor="@color/fontTextNormal"
         app:layout_constraintEnd_toEndOf="parent"

@@ -24,7 +24,8 @@
         android:src="@drawable/arrow"
 
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="ContentDescription" />
 
     <ImageView
         android:id="@+id/imAlbumes"
@@ -36,7 +37,8 @@
         android:src="@drawable/albumes"
 
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="ContentDescription" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/albumsRv"
