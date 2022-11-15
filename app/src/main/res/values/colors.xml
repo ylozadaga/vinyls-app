@@ -11,4 +11,5 @@
     <color name="fontOrange">#EF3737</color>
     <color name="fontTextNormal">#DBDCE0</color>
     <color name="backgroungButton">#30374D</color>
+    <color name="fontTextDark">#717683</color>
 </resources>
