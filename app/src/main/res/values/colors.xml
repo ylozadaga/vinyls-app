@@ -8,7 +8,9 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     <color name="background_general">#151f36</color>
+    <color name="background_clear">#26407C</color>
     <color name="fontOrange">#EF3737</color>
     <color name="fontTextNormal">#DBDCE0</color>
     <color name="backgroungButton">#30374D</color>
+
 </resources>

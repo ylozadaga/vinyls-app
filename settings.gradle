@@ -14,4 +14,3 @@ dependencyResolutionManagement {
 }
 rootProject.name = "Vinyls"
 include ':app'
-include ':app'

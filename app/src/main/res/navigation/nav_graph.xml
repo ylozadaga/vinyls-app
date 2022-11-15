@@ -13,35 +13,18 @@
             android:id="@+id/action_fragmentMenuInicial_to_fragmentAlbumList"
             app:destination="@id/fragmentAlbumList" />
     </fragment>
+
+
     <fragment
         android:id="@+id/fragmentAlbumList"
         android:name="com.example.vinyls.view.FragmentAlbumList"
-        tools:layout="@layout/activity_album_list">
+        tools:layout="@layout/fragment_album_list">
         <argument
             android:name="user"
             app:argType="integer" />
-        <action
-            android:id="@+id/action_fragmentAlbumList_to_fragmentAlbumDetail"
-            app:destination="@id/fragmentAlbumDetail" />
+
     </fragment>
-    <fragment
-        android:id="@+id/fragmentAlbumDetail"
-        android:name="com.example.vinyls.view.FragmentAlbumDetail"
-        tools:layout="@layout/activity_album_detail">
-        <argument
-            android:name="name"
-            app:argType="string" />
-        <argument
-            android:name="genero"
-            app:argType="string" />
-        <argument
-            android:name="cover"
-            app:argType="string" />
-        <argument
-            android:name="fecha"
-            app:argType="string" />
-        <argument
-            android:name="description"
-            app:argType="string" />
-    </fragment><action android:id="@+id/action_global_fragmentMenuInicial" app:destination="@id/fragmentMenuInicial"/>
+
+
+ <action android:id="@+id/action_global_fragmentMenuInicial" app:destination="@id/fragmentMenuInicial"/>
 </navigation>

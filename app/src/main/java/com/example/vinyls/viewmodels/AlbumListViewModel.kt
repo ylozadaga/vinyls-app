@@ -3,8 +3,7 @@ package com.example.vinyls.viewmodels
 import android.app.Application
 import androidx.lifecycle.*
 import com.example.vinyls.models.Album
-import com.example.vinyls.network.NetworkServiceAdapter
-import com.example.vinyls.repositories.AlbumRepository
+import com.example.vinyls.models.NetworkServiceAdapter
 
 class AlbumListViewModel(application: Application) :  AndroidViewModel(application) {
 
