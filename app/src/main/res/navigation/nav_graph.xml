@@ -47,5 +47,13 @@
     <fragment
         android:id="@+id/fragmentMenuVisitante"
         android:name="com.example.vinyls.view.FragmentMenuVisitante"
-        tools:layout="@layout/fragment_menu_visitante" />
+        tools:layout="@layout/fragment_menu_visitante" >
+        <action
+            android:id="@+id/action_fragmentMenuVisitante_to_fragmentMusicianList2"
+            app:destination="@id/fragmentMusicianList2" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentMusicianList2"
+        android:name="com.example.vinyls.view.FragmentMusicianList"
+        tools:layout="@layout/fragment_musician_list" />
 </navigation>

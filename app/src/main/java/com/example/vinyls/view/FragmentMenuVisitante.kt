@@ -17,8 +17,8 @@ class FragmentMenuVisitante : Fragment(R.layout.fragment_menu_visitante) {
         val buttonArtists = requireView().findViewById<Button>(R.id.buttonArtistGuest)
         val buttonCollector = requireView().findViewById<Button>(R.id.buttonCollectorsGuest)
 
-        buttonAlbums.setOnClickListener {
-            findNavController().navigate(R.id.action_fragmentMenuInicial_to_fragmentMenuColeccionista)
+        buttonArtists.setOnClickListener {
+            findNavController().navigate(R.id.action_fragmentMenuVisitante_to_fragmentMusicianList2)
         }
     }
 
