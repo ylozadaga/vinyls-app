@@ -4,6 +4,9 @@
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="texto_usuario">VISITANTE</string>
     <string name="texto_coleccionista">COLECCIONISTA</string>
+    <string name="texto_coleccionista_lowcase">Coleccionista</string>
+    <string name="texto_albumes_lowcase">Albumes</string>
+    <string name="texto_visitante_lowcase">Visitante</string>
     <string name="text_usuario">VISITANTE</string>
     <string name="text_album_genero">Género</string>
     <string name="text_album_fecha">Fecha</string>
@@ -14,6 +17,10 @@
     <string name="text_artista">"Artista</string>
     <string name="c_mo_deseas_ingresar">¿Cómo deseas ingresar?</string>
     <string name="bienvenid_a">Bienvenid@ a</string>
+    <string name="albums_string">Albumes</string>
+    <string name="crear_album_string">Crear Álbum</string>
+    <string name="artistas_string">Artistas</string>
+    <string name="coleccionistas_string">Coleccionistas</string>
 
 
 </resources>

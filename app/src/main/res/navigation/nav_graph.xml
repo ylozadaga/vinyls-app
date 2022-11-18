@@ -10,8 +10,11 @@
         android:name="com.example.vinyls.view.FragmentMenuInicial"
         tools:layout="@layout/fragment_menu_inicial">
         <action
-            android:id="@+id/action_fragmentMenuInicial_to_fragmentAlbumList"
-            app:destination="@id/fragmentAlbumList" />
+            android:id="@+id/action_fragmentMenuInicial_to_fragmentMenuColeccionista"
+            app:destination="@id/fragmentMenuColeccionista" />
+        <action
+            android:id="@+id/action_fragmentMenuInicial_to_fragmentMenuVisitante"
+            app:destination="@id/fragmentMenuVisitante" />
     </fragment>
 
 
@@ -22,9 +25,27 @@
         <argument
             android:name="user"
             app:argType="integer" />
+        <action
+            android:id="@+id/action_fragmentAlbumList_to_fragmentMenuColeccionista"
+            app:destination="@id/fragmentMenuColeccionista" />
 
     </fragment>
 
 
  <action android:id="@+id/action_global_fragmentMenuInicial" app:destination="@id/fragmentMenuInicial"/>
+    <fragment
+        android:id="@+id/fragmentMenuColeccionista"
+        android:name="com.example.vinyls.view.FragmentMenuColeccionista"
+        tools:layout="@layout/fragment_menu_coleccionista" >
+        <action
+            android:id="@+id/action_fragmentMenuColeccionista_to_fragmentAlbumList"
+            app:destination="@id/fragmentAlbumList" />
+        <action
+            android:id="@+id/action_fragmentMenuColeccionista_to_fragmentMenuInicial"
+            app:destination="@id/fragmentMenuInicial" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentMenuVisitante"
+        android:name="com.example.vinyls.view.FragmentMenuVisitante"
+        tools:layout="@layout/fragment_menu_visitante" />
 </navigation>
