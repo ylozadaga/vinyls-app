@@ -10,6 +10,7 @@ import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.example.vinyls.R
 import com.example.vinyls.databinding.FragmentAlbumListBinding
 import com.example.vinyls.models.Album
 import com.example.vinyls.models.AlbumsAdapter
@@ -20,7 +21,7 @@ import com.example.vinyls.viewmodels.AlbumListViewModel
  * A simple [Fragment] subclass as the default destination in the navigation.
  */
 @Suppress("DEPRECATION")
-class FragmentAlbumList : Fragment() {
+class FragmentAlbumList : Fragment(R.layout.fragment_album_list) {
 
     private var _binding: FragmentAlbumListBinding? = null
     private val binding get() = _binding!!
