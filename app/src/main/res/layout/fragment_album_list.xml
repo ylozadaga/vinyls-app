@@ -5,22 +5,25 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".view.FragmentAlbumList"
-    android:layout_marginTop="10dp"
     android:layout_marginStart="16dp"
     android:layout_marginEnd="16dp"
     tools:background="@color/purple_200"
     android:id="@+id/fragmentAlbumList">
 
 
-    <ImageView
-        android:id="@+id/imAlbumes"
+    <TextView
+        android:id="@+id/textViewAlbums"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="12dp"
-        android:layout_marginStart="52dp"
-        android:layout_marginTop="32dp"
-        android:src="@drawable/albumes"
-
+        android:layout_marginTop="14dp"
+        android:fontFamily="sans-serif-medium"
+        android:text="@string/texto_albumes_lowcase"
+        android:textAlignment="center"
+        android:textColor="@color/fontTextNormal"
+        android:textSize="20sp"
+        android:textStyle="italic"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -28,7 +31,7 @@
         android:id="@+id/albumsRv"
         android:layout_width="match_parent"
         android:layout_height="600dp"
-        app:layout_constraintTop_toBottomOf="@id/imAlbumes"
+        app:layout_constraintTop_toBottomOf="@id/textViewAlbums"
         app:layout_constraintStart_toStartOf="parent"
         android:layout_margin="15dp"
         tools:listitem="@layout/album_item"
