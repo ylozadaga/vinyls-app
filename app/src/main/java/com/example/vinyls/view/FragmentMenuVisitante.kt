@@ -20,6 +20,9 @@ class FragmentMenuVisitante : Fragment(R.layout.fragment_menu_visitante) {
         buttonArtists.setOnClickListener {
             findNavController().navigate(R.id.action_fragmentMenuVisitante_to_fragmentMusicianList2)
         }
+        buttonCollector.setOnClickListener {
+            findNavController().navigate(R.id.action_fragmentMenuVisitante_to_fragmentCollectorList3)
+        }
     }
 
 }
