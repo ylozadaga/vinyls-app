@@ -22,5 +22,4 @@ class FragmentMenuColeccionista : Fragment(R.layout.fragment_menu_coleccionista)
     }
 
 
-
 }

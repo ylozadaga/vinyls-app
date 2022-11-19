@@ -21,15 +21,15 @@ class FragmentMenuInicial : Fragment(R.layout.fragment_menu_inicial) {
         // Inflate the layout for this fragment
 
         val view = inflater.inflate(R.layout.fragment_menu_inicial, container, false);
-        val btn : Button = view.findViewById(R.id.btnVisitante)
+        val btn: Button = view.findViewById(R.id.btnVisitante)
 
-        val btn2 : Button = view.findViewById(R.id.btnColeccionista)
+        val btn2: Button = view.findViewById(R.id.btnColeccionista)
 
         btn.setOnClickListener {
             findNavController().navigate(R.id.action_fragmentMenuInicial_to_fragmentMenuVisitante)
         }
 
-        btn2.setOnClickListener{
+        btn2.setOnClickListener {
             val fragment = FragmentMenuColeccionista()
             findNavController().navigate(R.id.action_fragmentMenuInicial_to_fragmentMenuColeccionista)
         }
@@ -49,7 +49,6 @@ class FragmentMenuInicial : Fragment(R.layout.fragment_menu_inicial) {
 
         return view
     }
-
 
 
 }
