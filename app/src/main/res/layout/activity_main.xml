@@ -15,7 +15,6 @@
         android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
         app:layout_constraintTop_toTopOf="parent"
         app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
-
     </androidx.appcompat.widget.Toolbar>
 
 
