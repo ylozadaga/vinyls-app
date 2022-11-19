@@ -2,12 +2,12 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
     android:id="@+id/fragment_menu"
     android:name="fragment_menu"
-    app:defaultNavHost="true"
-    android:background="@color/background_general">
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_general"
+    app:defaultNavHost="true">
 
     <TextView
         android:id="@+id/textViewBienvenida"
@@ -35,7 +35,6 @@
         android:textSize="48sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textViewBienvenida" />
-
 
 
     <TextView
@@ -66,9 +65,9 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btnVisitante"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.55"
-        app:layout_constraintTop_toBottomOf="@id/btnVisitante" />
+        app:layout_constraintVertical_bias="0.55" />
 
 
     <Button
@@ -83,8 +82,7 @@
         app:backgroundTint="@null"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/btnColeccionista"
-        />
+        app:layout_constraintTop_toTopOf="@+id/btnColeccionista" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

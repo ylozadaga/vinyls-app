@@ -21,7 +21,7 @@ import com.example.vinyls.viewmodels.AlbumListViewModel
  * A simple [Fragment] subclass as the default destination in the navigation.
  */
 @Suppress("DEPRECATION")
-class FragmentAlbumList : Fragment(R.layout.fragment_album_list) {
+class FragmentAlbumList : Fragment() {
 
     private var _binding: FragmentAlbumListBinding? = null
     private val binding get() = _binding!!
@@ -50,23 +50,28 @@ class FragmentAlbumList : Fragment(R.layout.fragment_album_list) {
         val activity = requireNotNull(this.activity) {
             "You can only access the viewModel after onActivityCreated()"
         }
-        viewModel = ViewModelProvider(this, AlbumListViewModel.Factory(activity.application)).get(AlbumListViewModel::class.java)
+        viewModel = ViewModelProvider(this, AlbumListViewModel.Factory(activity.application)).get(
+            AlbumListViewModel::class.java
+        )
         viewModel.albums.observe(viewLifecycleOwner, Observer<List<Album>> {
             it.apply {
                 viewModelAdapter!!.albums = this
             }
         })
-        viewModel.eventNetworkError.observe(viewLifecycleOwner, Observer<Boolean> { isNetworkError ->
-            if (isNetworkError) onNetworkError()
-        })
+        viewModel.eventNetworkError.observe(
+            viewLifecycleOwner,
+            Observer<Boolean> { isNetworkError ->
+                if (isNetworkError) onNetworkError()
+            })
     }
+
     override fun onDestroyView() {
         super.onDestroyView()
         _binding = null
     }
 
     private fun onNetworkError() {
-        if(!viewModel.isNetworkErrorShown.value!!) {
+        if (!viewModel.isNetworkErrorShown.value!!) {
             Toast.makeText(activity, "Network Error", Toast.LENGTH_LONG).show()
             viewModel.onNetworkErrorShown()
         }
