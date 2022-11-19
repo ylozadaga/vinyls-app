@@ -52,23 +52,6 @@
 
 
     <Button
-        android:id="@+id/btnVisitante"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_margin="90dp"
-        android:background="@drawable/button_general"
-        android:text="@string/text_usuario"
-        android:textAlignment="center"
-        android:textColor="@color/fontTextNormal"
-        app:backgroundTint="@null"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.55" />
-
-    <Button
         android:id="@+id/btnColeccionista"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -79,9 +62,29 @@
         android:textAlignment="center"
         android:textColor="@color/fontTextNormal"
         app:backgroundTint="@null"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.55"
+        app:layout_constraintTop_toBottomOf="@id/btnVisitante" />
+
+
+    <Button
+        android:id="@+id/btnVisitante"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="90dp"
+        android:background="@drawable/button_general"
+        android:text="@string/text_usuario"
+        android:textAlignment="center"
+        android:textColor="@color/fontTextNormal"
+        app:backgroundTint="@null"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/btnVisitante" />
+        app:layout_constraintTop_toTopOf="@+id/btnColeccionista"
+        />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
