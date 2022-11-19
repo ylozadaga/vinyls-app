@@ -26,9 +26,9 @@
             android:layout_height="80dp"
             android:layout_marginHorizontal="15dp"
             android:layout_marginVertical="15dp"
-            android:contentDescription="Portada del album"
+            android:contentDescription="Portada general"
             android:scaleType="fitXY"
-            app:srcCompat="@drawable/vinilos" />
+            app:srcCompat="@drawable/album" />
 
         <LinearLayout
             android:layout_width="match_parent"
