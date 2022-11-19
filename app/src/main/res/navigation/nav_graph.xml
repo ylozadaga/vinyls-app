@@ -5,6 +5,9 @@
     android:id="@+id/nav_graph.xml"
     app:startDestination="@id/fragmentMenuInicial">
 
+    <action android:id="@+id/action_global_fragmentMenuInicial"
+        app:destination="@id/fragmentMenuInicial"/>
+
 
          <!-- Coleccionista o Visitante   -->
     <fragment
@@ -56,37 +59,39 @@
             app:destination="@id/fragmentAlbumDetail" />
     </fragment>
 
+    <!-- Detalle album  -->
+    <fragment
+        android:id="@+id/fragmentAlbumDetail"
+        android:name="com.example.vinyls.view.FragmentAlbumDetail"
+        tools:layout="@layout/fragment_album_detail">
+        <argument
+            android:name="name"
+            app:argType="string" />
+        <argument
+            android:name="genero"
+            app:argType="string" />
+        <argument
+            android:name="cover"
+            app:argType="string" />
+        <argument
+            android:name="fecha"
+            app:argType="string" />
+        <argument
+            android:name="description"
+            app:argType="string" />
+    </fragment>
 
+    <!-- Detalle artista -->
     <fragment
         android:id="@+id/fragmentMusicianList2"
         android:name="com.example.vinyls.view.FragmentMusicianList"
         tools:layout="@layout/fragment_musician_list" />
+
+    <!-- Detalle coleccionista -->
     <fragment
         android:id="@+id/fragmentCollectorList3"
         android:name="com.example.vinyls.view.FragmentCollectorList"
         tools:layout="@layout/fragment_collector_list" />
 
 
-    <!-- Detalle album  -->
-        <fragment
-            android:id="@+id/fragmentAlbumDetail"
-            android:name="com.example.vinyls.view.FragmentAlbumDetail"
-            tools:layout="@layout/fragment_album_detail">
-            <argument
-                android:name="name"
-                app:argType="string" />
-            <argument
-                android:name="genero"
-                app:argType="string" />
-            <argument
-                android:name="cover"
-                app:argType="string" />
-            <argument
-                android:name="fecha"
-                app:argType="string" />
-            <argument
-                android:name="description"
-                app:argType="string" />
-        </fragment><action android:id="@+id/action_global_fragmentMenuInicial"
-        app:destination="@id/fragmentMenuInicial"/>
 </navigation>
