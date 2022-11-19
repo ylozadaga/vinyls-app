@@ -6,6 +6,8 @@
     <string name="texto_coleccionista">COLECCIONISTA</string>
     <string name="texto_coleccionista_lowcase">Coleccionista</string>
     <string name="texto_albumes_lowcase">Albumes</string>
+    <string name="texto_musician_lowcase">Artistas</string>
+    <string name="texto_collector_lowcase">Coleccionistas</string>
     <string name="texto_visitante_lowcase">Visitante</string>
     <string name="text_usuario">VISITANTE</string>
     <string name="text_album_genero">Género</string>

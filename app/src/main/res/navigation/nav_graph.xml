@@ -36,6 +36,12 @@
         <action
             android:id="@+id/action_fragmentMenuVisitante_to_fragmentAlbumList"
             app:destination="@id/fragmentAlbumList" />
+         <action
+            android:id="@+id/action_fragmentMenuVisitante_to_fragmentMusicianList2"
+            app:destination="@id/fragmentMusicianList2" />
+        <action
+            android:id="@+id/action_fragmentMenuVisitante_to_fragmentCollectorList3"
+            app:destination="@id/fragmentCollectorList3" />
 
     <!-- Listado Albumes  -->
     <fragment
@@ -49,6 +55,16 @@
             android:id="@+id/action_fragmentAlbumList_to_fragmentAlbumDetail"
             app:destination="@id/fragmentAlbumDetail" />
     </fragment>
+
+
+    <fragment
+        android:id="@+id/fragmentMusicianList2"
+        android:name="com.example.vinyls.view.FragmentMusicianList"
+        tools:layout="@layout/fragment_musician_list" />
+    <fragment
+        android:id="@+id/fragmentCollectorList3"
+        android:name="com.example.vinyls.view.FragmentCollectorList"
+        tools:layout="@layout/fragment_collector_list" />
 
 
     <!-- Detalle album  -->

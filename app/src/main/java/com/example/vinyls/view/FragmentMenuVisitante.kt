@@ -19,6 +19,7 @@ class FragmentMenuVisitante : Fragment(R.layout.fragment_menu_visitante) {
 
         buttonAlbums.setOnClickListener {
             findNavController().navigate(R.id.action_fragmentMenuVisitante_to_fragmentAlbumList)
+
         }
     }
 
