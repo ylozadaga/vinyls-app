@@ -16,7 +16,7 @@ import com.example.vinyls.databinding.FragmentMusicianListBinding
 import com.example.vinyls.models.Collector
 import com.example.vinyls.models.CollectorAdapter
 import com.example.vinyls.models.Musician
-import com.example.vinyls.models.MusicianAdapter
+//import com.example.vinyls.models.MusicianAdapter
 import com.example.vinyls.viewmodels.CollectorListViewModel
 import com.example.vinyls.viewmodels.MusicianListViewModel
 
