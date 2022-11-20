@@ -84,6 +84,10 @@
                     android:textColor="@color/white"
                     android:textSize="18sp"
                     android:textStyle="bold" />
+<<<<<<< HEAD
+
+=======
+>>>>>>> 27888a116757b70f7978fa896f27b7d2d5547d34
             </LinearLayout>
 
         </LinearLayout>
