@@ -15,7 +15,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="14dp"
         android:fontFamily="sans-serif-medium"
-        android:text="@string/texto_coleccionista_lowcase"
+        android:text="@string/texto_visitante_lowcase"
         android:textAlignment="center"
         android:textColor="@color/fontTextNormal"
         android:textSize="20sp"

@@ -23,25 +23,24 @@
     <fragment
         android:id="@+id/fragmentMenuColeccionista"
         android:name="com.example.vinyls.view.FragmentMenuColeccionista"
-        tools:layout="@layout/fragment_menu_coleccionista"/>
+        tools:layout="@layout/fragment_menu_coleccionista">
         <action
             android:id="@+id/action_fragmentMenuColeccionista_to_fragmentAlbumList"
             app:destination="@id/fragmentAlbumList" />
+    </fragment>
 
     <!-- Visitante   -->
     <fragment
         android:id="@+id/fragmentMenuVisitante"
         android:name="com.example.vinyls.view.FragmentMenuVisitante"
-        tools:layout="@layout/fragment_menu_visitante" />
+        tools:layout="@layout/fragment_menu_visitante" >
         <action
-            android:id="@+id/action_fragmentMenuVisitante_to_fragmentAlbumList"
-            app:destination="@id/fragmentAlbumList" />
-         <action
             android:id="@+id/action_fragmentMenuVisitante_to_fragmentMusicianList2"
             app:destination="@id/fragmentMusicianList2" />
         <action
             android:id="@+id/action_fragmentMenuVisitante_to_fragmentCollectorList3"
             app:destination="@id/fragmentCollectorList3" />
+    </fragment>
 
     <!-- Listado Albumes  -->
     <fragment
