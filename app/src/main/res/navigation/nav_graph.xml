@@ -39,10 +39,11 @@ app:destination="@id/fragmentMenuInicial"/>
         android:id="@+id/fragmentMenuVisitante"
         android:name="com.example.vinyls.view.FragmentMenuVisitante"
         tools:layout="@layout/fragment_menu_visitante" >
-        <action
-            android:id="@+id/action_fragmentMenuVisitante_to_fragmentMusicianList"
-            app:destination="@id/fragmentMusicianList" />
+
     </fragment>
+    <action
+        android:id="@+id/action_fragmentMenuVisitante_to_fragmentMusicianList"
+        app:destination="@id/fragmentMusicianList" />
     <action
         android:id="@+id/action_fragmentMenuVisitante_to_fragmentAlbumList"
         app:destination="@id/fragmentAlbumList" />
@@ -58,10 +59,11 @@ app:destination="@id/fragmentMenuInicial"/>
         <argument
             android:name="user"
             app:argType="integer" />
-        <action
-            android:id="@+id/action_fragmentAlbumList_to_fragmentAlbumDetail"
-            app:destination="@id/fragmentAlbumDetail" />
+
     </fragment>
+    <action
+        android:id="@+id/action_fragmentAlbumList_to_fragmentAlbumDetail"
+        app:destination="@id/fragmentAlbumDetail" />
 
     <!-- Detalle album  -->
     <fragment
@@ -91,10 +93,11 @@ app:destination="@id/fragmentMenuInicial"/>
         android:id="@+id/fragmentMusicianList"
         android:name="com.example.vinyls.view.FragmentMusicianList"
         tools:layout="@layout/fragment_musician_list" >
-        <action
-            android:id="@+id/action_fragmentMusicianList_to_fragmentMusicianDetail"
-            app:destination="@id/fragmentMusicianDetail" />
+
     </fragment>
+    <action
+        android:id="@+id/action_fragmentMusicianList_to_fragmentMusicianDetail"
+        app:destination="@id/fragmentMusicianDetail" />
     <!-- Detalle artista -->
     <fragment
         android:id="@+id/fragmentMusicianDetail"

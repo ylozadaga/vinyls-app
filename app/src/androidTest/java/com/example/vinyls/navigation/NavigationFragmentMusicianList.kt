@@ -7,13 +7,17 @@ import androidx.navigation.Navigation
 import androidx.navigation.testing.TestNavHostController
 import androidx.recyclerview.widget.RecyclerView
 import androidx.test.core.app.ApplicationProvider
+import androidx.test.espresso.Espresso
 import androidx.test.espresso.Espresso.onView
 import androidx.test.espresso.action.ViewActions.click
+import androidx.test.espresso.assertion.ViewAssertions
 import androidx.test.espresso.contrib.RecyclerViewActions
+import androidx.test.espresso.matcher.ViewMatchers
 import androidx.test.espresso.matcher.ViewMatchers.withId
 import androidx.test.ext.junit.runners.AndroidJUnit4
 import com.example.vinyls.R
 import com.example.vinyls.view.FragmentMusicianList
+import org.hamcrest.Matchers
 import org.junit.Assert
 import org.junit.Assert.assertEquals
 import org.junit.Before
@@ -42,7 +46,7 @@ class NavigationFragmentMusicianList {
     }
     @Test
     fun navigate_to_musician_detail(){
-        SystemClock.sleep(5000);
+        SystemClock.sleep(2000);
         onView(withId(R.id.musicianRv)).perform(
             RecyclerViewActions.actionOnItemAtPosition<RecyclerView.ViewHolder>(
                 0, click()
@@ -50,4 +54,12 @@ class NavigationFragmentMusicianList {
         )
         assertEquals(navController.currentDestination?.id, R.id.fragmentMusicianDetail)
     }
+
+    @Test
+    fun check_textview_top(){
+        onView(withId(R.id.textViewMusician))
+            .check(ViewAssertions.matches(ViewMatchers.withText(Matchers.containsString("Artistas"))))
+
+    }
+
 }
