@@ -3,6 +3,9 @@
 # Release V1.0
 https://github.com/ylozadaga/vinyls-app/releases/tag/v1.0
 
+# Release V2.0
+https://github.com/ylozadaga/vinyls-app/releases/tag/v2.0
+
 # Ejecución de la aplicación desde una maquina local
 - Clonar desde el repositorio https://https://github.com/ylozadaga/vinyls-app en su equipo
 - Posterior a lo anterior se debera abrir desde la aplicación desde la consola de Android Studio (maquina virtual)
@@ -12,6 +15,11 @@ https://github.com/ylozadaga/vinyls-app/releases/tag/v1.0
 
 # Ejecución de la aplicación desde un dispositivo móvil(APK)
 - Descargar el APK desde un dispositivo Android desde este link:
+
+# Release V1.0
+https://github.com/ylozadaga/vinyls-app/releases/download/v1.0/VinylsApp_S1.apk
+
+# Release V2.0
 https://github.com/ylozadaga/vinyls-app/releases/download/v1.0/VinylsApp_S1.apk
 - Instalar la aplicación
 
