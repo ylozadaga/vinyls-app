@@ -38,16 +38,17 @@ app:destination="@id/fragmentMenuInicial"/>
     <fragment
         android:id="@+id/fragmentMenuVisitante"
         android:name="com.example.vinyls.view.FragmentMenuVisitante"
-        tools:layout="@layout/fragment_menu_visitante" />
+        tools:layout="@layout/fragment_menu_visitante" >
+        <action
+            android:id="@+id/action_fragmentMenuVisitante_to_fragmentMusicianList"
+            app:destination="@id/fragmentMusicianList" />
+    </fragment>
     <action
         android:id="@+id/action_fragmentMenuVisitante_to_fragmentAlbumList"
         app:destination="@id/fragmentAlbumList" />
     <action
-        android:id="@+id/action_fragmentMenuVisitante_to_fragmentMusicianList"
-        app:destination="@+id/fragmentMusicianList" />
-    <action
         android:id="@+id/action_fragmentMenuVisitante_to_fragmentCollectorList3"
-        app:destination="@id/fragmentCollectorList3" />
+        app:destination="@id/fragmentCollectorList" />
 
     <!-- Listado Albumes  -->
     <fragment
@@ -88,12 +89,12 @@ app:destination="@id/fragmentMenuInicial"/>
     <!-- Listado Artistas  -->
     <fragment
         android:id="@+id/fragmentMusicianList"
-        android:name="com.example.vinyls.view.FragmentMusicianList" >
+        android:name="com.example.vinyls.view.FragmentMusicianList"
+        tools:layout="@layout/fragment_musician_list" >
         <action
             android:id="@+id/action_fragmentMusicianList_to_fragmentMusicianDetail"
             app:destination="@id/fragmentMusicianDetail" />
     </fragment>
-
     <!-- Detalle artista -->
     <fragment
         android:id="@+id/fragmentMusicianDetail"
@@ -116,9 +117,10 @@ app:destination="@id/fragmentMenuInicial"/>
 
     <!-- Detalle coleccionista -->
     <fragment
-        android:id="@+id/fragmentCollectorList3"
+        android:id="@+id/fragmentCollectorList"
         android:name="com.example.vinyls.view.FragmentCollectorList"
         tools:layout="@layout/fragment_collector_list" />
+
 
 
 </navigation>

@@ -18,6 +18,7 @@ import com.example.vinyls.models.MusicianAdapter
 import com.example.vinyls.viewmodels.AlbumListViewModel
 import com.example.vinyls.viewmodels.MusicianListViewModel
 
+@Suppress("DEPRECATION")
 class FragmentMusicianList : Fragment() {
 
     private var _binding: FragmentMusicianListBinding? = null
