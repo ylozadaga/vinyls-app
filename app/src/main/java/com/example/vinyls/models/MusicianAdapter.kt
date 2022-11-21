@@ -36,7 +36,7 @@ class MusicianAdapter :RecyclerView.Adapter<MusicianAdapter.MusicianViewHolder>(
         holder.viewDataBinding.also {
             it.musician = musicians[position]
         }
-        //*                         actionFragmentMusicianListToFragmentMusicianDetail
+        holder.bind(musicians[position])
         holder.viewDataBinding.root.setOnClickListener {
             val action = FragmentMusicianListDirections.actionFragmentMusicianListToFragmentMusicianDetail(musicians[position].name,
                 musicians[position].birthDate, musicians[position].image, musicians[position].description)
