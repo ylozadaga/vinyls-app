@@ -29,7 +29,7 @@ class MainActivityTest {
 
     @Test
     fun homeIconNavigateToMainPage() {
-        onView(withId(R.id.tvVisitante)).perform(click())
+        onView(withId(R.id.btnVisitante)).perform(click())
 
         SystemClock.sleep(1000);
         onView(withId(R.id.imHouse)).perform(click())
@@ -39,23 +39,23 @@ class MainActivityTest {
 
     @Test
     fun validateVisitorsText() {
-        onView(withId(R.id.tvVisitante)).check(matches(withText(containsString("Usuario visitante"))))
+        onView(withId(R.id.btnVisitante)).check(matches(withText(containsString("Usuario visitante"))))
     }
 
     @Test
     fun validateCollectorText() {
-        onView(withId(R.id.tvColeccionista)).check(matches(withText(containsString("Coleccionista"))))
+        onView(withId(R.id.btnColeccionista)).check(matches(withText(containsString("Coleccionista"))))
     }
 
     @Test
     fun navigateToAlbumList() {
-        onView(withId(R.id.tvColeccionista)).perform(click())
+        onView(withId(R.id.btnColeccionista)).perform(click())
         onView(withId(R.id.fragmentAlbumList)).check(matches(isDisplayed()))
     }
 
     @Test
     fun navigateToAlbumDetails() {
-        onView(withId(R.id.tvColeccionista)).perform(click())
+        onView(withId(R.id.btnColeccionista)).perform(click())
 
         SystemClock.sleep(2000);
 

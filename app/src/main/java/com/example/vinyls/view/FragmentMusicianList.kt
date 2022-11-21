@@ -11,36 +11,36 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.vinyls.R
-import com.example.vinyls.databinding.FragmentAlbumListBinding
+import com.example.vinyls.databinding.FragmentMusicianListBinding
 import com.example.vinyls.models.Album
-import com.example.vinyls.models.AlbumsAdapter
+import com.example.vinyls.models.Musician
+import com.example.vinyls.models.MusicianAdapter
 import com.example.vinyls.viewmodels.AlbumListViewModel
+import com.example.vinyls.viewmodels.MusicianListViewModel
 
-
-/**
- * A simple [Fragment] subclass as the default destination in the navigation.
- */
 @Suppress("DEPRECATION")
-class FragmentAlbumList : Fragment() {
+class FragmentMusicianList : Fragment() {
 
-    private var _binding: FragmentAlbumListBinding? = null
+    private var _binding: FragmentMusicianListBinding? = null
     private val binding get() = _binding!!
     private lateinit var recyclerView: RecyclerView
-    private lateinit var viewModel: AlbumListViewModel
-    private var viewModelAdapter: AlbumsAdapter? = null
+    private lateinit var viewModel: MusicianListViewModel
+    private var viewModelAdapter: MusicianAdapter? = null
+
 
     override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
+        inflater: LayoutInflater,
+        container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        _binding = FragmentAlbumListBinding.inflate(inflater, container, false)
+        _binding = FragmentMusicianListBinding.inflate(inflater, container, false)
         val view = binding.root
-        viewModelAdapter = AlbumsAdapter()
+        viewModelAdapter = MusicianAdapter()
         return view
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        recyclerView = binding.albumsRv
+        recyclerView = binding.musicianRv
         recyclerView.layoutManager = LinearLayoutManager(context)
         recyclerView.adapter = viewModelAdapter
     }
@@ -50,28 +50,25 @@ class FragmentAlbumList : Fragment() {
         val activity = requireNotNull(this.activity) {
             "You can only access the viewModel after onActivityCreated()"
         }
-        viewModel = ViewModelProvider(this, AlbumListViewModel.Factory(activity.application)).get(
-            AlbumListViewModel::class.java
-        )
-        viewModel.albums.observe(viewLifecycleOwner, Observer<List<Album>> {
+        viewModel = ViewModelProvider(this, MusicianListViewModel.Factory(activity.application)).get(
+            MusicianListViewModel::class.java)
+        viewModel.musicians.observe(viewLifecycleOwner, Observer<List<Musician>> {
             it.apply {
-                viewModelAdapter!!.albums = this
+                viewModelAdapter!!.musicians = this
             }
         })
-        viewModel.eventNetworkError.observe(
-            viewLifecycleOwner,
-            Observer<Boolean> { isNetworkError ->
-                if (isNetworkError) onNetworkError()
-            })
+        viewModel.eventNetworkError.observe(viewLifecycleOwner, Observer<Boolean> { isNetworkError ->
+            if (isNetworkError) onNetworkError()
+        })
     }
 
     override fun onDestroyView() {
         super.onDestroyView()
-        _binding = null
+        _binding= null
     }
 
     private fun onNetworkError() {
-        if (!viewModel.isNetworkErrorShown.value!!) {
+        if(!viewModel.isNetworkErrorShown.value!!) {
             Toast.makeText(activity, "Network Error", Toast.LENGTH_LONG).show()
             viewModel.onNetworkErrorShown()
         }

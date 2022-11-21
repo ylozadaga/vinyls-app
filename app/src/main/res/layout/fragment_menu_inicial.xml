@@ -2,14 +2,12 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
     android:id="@+id/fragment_menu"
     android:name="fragment_menu"
-    app:defaultNavHost="true"
-    android:background="@color/background_general">
-
-    <!-- TODO: Update blank fragment layout -->
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_general"
+    app:defaultNavHost="true">
 
     <TextView
         android:id="@+id/textViewBienvenida"
@@ -39,7 +37,6 @@
         app:layout_constraintTop_toBottomOf="@+id/textViewBienvenida" />
 
 
-
     <TextView
         android:id="@+id/textViewHowIn"
         android:layout_width="match_parent"
@@ -53,37 +50,39 @@
         tools:layout_editor_absoluteX="28dp" />
 
 
-    <TextView
-        android:id="@+id/tvVisitante"
-        android:layout_width="193dp"
-        android:layout_height="34dp"
+    <Button
+        android:id="@+id/btnColeccionista"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_margin="90dp"
-        android:background="#FF6200EE"
-        android:text="@string/text_usuario"
+        android:layout_marginTop="84dp"
+        android:background="@drawable/button_general"
+        android:text="@string/texto_coleccionista"
         android:textAlignment="center"
-        android:textColor="@color/white"
-        android:textSize="19sp"
+        android:textColor="@color/fontTextNormal"
+        app:backgroundTint="@null"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btnVisitante"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.55" />
 
-    <TextView
-        android:id="@+id/tvColeccionista"
-        android:layout_width="194dp"
-        android:layout_height="34dp"
+
+    <Button
+        android:id="@+id/btnVisitante"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_margin="90dp"
-        android:layout_marginTop="84dp"
-        android:background="#FF6200EE"
-        android:text="@string/texto_coleccionista"
+        android:background="@drawable/button_general"
+        android:text="@string/text_usuario"
         android:textAlignment="center"
-        android:textColor="@color/white"
-        android:textSize="19sp"
+        android:textColor="@color/fontTextNormal"
+        app:backgroundTint="@null"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tvVisitante" />
+        app:layout_constraintTop_toTopOf="@+id/btnColeccionista" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

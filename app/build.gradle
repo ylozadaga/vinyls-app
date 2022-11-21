@@ -37,6 +37,13 @@ android {
         viewBinding true
         dataBinding true
     }
+    dataBinding {
+        enabled true
+    }
+    // Always show the result of every unit test when running via command line, even if it passes.
+    testOptions.unitTests {
+        includeAndroidResources = true
+    }
 }
 
 dependencies {
@@ -52,8 +59,19 @@ dependencies {
     implementation 'androidx.test:core-ktx:1.4.0'
     implementation 'androidx.test.espresso:espresso-contrib:3.4.0'
     testImplementation 'junit:junit:4.13.2'
+    testImplementation 'androidx.arch.core:core-testing:2.1.0'
+    // AndroidX Test - JVM testing
+    testImplementation "androidx.test.ext:junit-ktx:1.1.3"
+
+    testImplementation "androidx.test:core-ktx:1.4.0"
+
+    testImplementation "org.robolectric:robolectric:4.5.1"
+    ////
     androidTestImplementation 'androidx.test.ext:junit:1.1.3'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
+    androidTestImplementation 'androidx.navigation:navigation-testing:2.5.2'
+    debugImplementation('androidx.fragment:fragment-testing:1.5.4')
 
     implementation 'com.squareup.picasso:picasso:2.71828'
+    implementation 'com.github.bumptech.glide:glide:4.8.0'
 }
