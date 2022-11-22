@@ -1,18 +1,19 @@
 package com.example.vinyls.viewmodels
 
 import android.app.Application
-import androidx.lifecycle.AndroidViewModel
-import androidx.lifecycle.LiveData
-import androidx.lifecycle.MutableLiveData
-import androidx.lifecycle.ViewModel
-import androidx.lifecycle.ViewModelProvider
+import android.util.Log
+import androidx.lifecycle.*
 import com.example.vinyls.models.Musician
-import com.example.vinyls.models.NetworkServiceAdapter
+import com.example.vinyls.models.MusicianRepository
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.launch
+import kotlinx.coroutines.withContext
+
 
 class MusicianListViewModel(application: Application) : AndroidViewModel(application) {
 
     private val _musicians = MutableLiveData<List<Musician>>()
-
+    private val musicianRepository = MusicianRepository(application)
     val musicians : LiveData<List<Musician>>
         get() = _musicians
 
@@ -30,14 +31,22 @@ class MusicianListViewModel(application: Application) : AndroidViewModel(applica
         refreshDataFromNetwork()
     }
 
+
     private fun refreshDataFromNetwork() {
-        NetworkServiceAdapter.getInstance(getApplication()).getMusicians({
-            _musicians.postValue(it)
-            _eventNetworkError.value = false
-            _isNetworkErrorShown.value = false
-            },{
-                _eventNetworkError.value = true
-        })
+        try {
+            viewModelScope.launch(Dispatchers.Default) {
+                withContext(Dispatchers.IO) {
+                    var data = musicianRepository.refreshData()
+                    _musicians.postValue(data)
+                }
+                _eventNetworkError.postValue(false)
+                _isNetworkErrorShown.postValue(false)
+            }
+        }
+        catch (e:Exception){ //se procesa la excepcion
+            Log.d("Error", e.toString())
+            _eventNetworkError.postValue(true)
+        }
     }
 
     fun onNetworkErrorShown(){
