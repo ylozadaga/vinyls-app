@@ -4,7 +4,7 @@ import android.app.Application
 import android.util.Log
 import androidx.lifecycle.*
 import com.example.vinyls.models.Musician
-import com.example.vinyls.models.MusicianRepository
+import com.example.vinyls.models.repository.MusicianRepository
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext

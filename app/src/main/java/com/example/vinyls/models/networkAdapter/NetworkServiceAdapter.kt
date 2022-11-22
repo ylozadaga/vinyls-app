@@ -1,4 +1,4 @@
-package com.example.vinyls.models
+package com.example.vinyls.models.networkAdapter
 import android.content.Context
 import com.android.volley.Request
 import com.android.volley.RequestQueue
@@ -7,6 +7,9 @@ import com.android.volley.VolleyError
 import com.android.volley.toolbox.JsonObjectRequest
 import com.android.volley.toolbox.StringRequest
 import com.android.volley.toolbox.Volley
+import com.example.vinyls.models.Album
+import com.example.vinyls.models.Collector
+import com.example.vinyls.models.Musician
 import org.json.JSONArray
 import org.json.JSONObject
 import kotlin.coroutines.resume
@@ -42,7 +45,8 @@ class NetworkServiceAdapter constructor(context: Context) {
                         recordLabel = item.getString("recordLabel"),
                         releaseDate = item.getString("releaseDate"),
                         genre = item.getString("genre"),
-                        description = item.getString("description")))
+                        description = item.getString("description"))
+                    )
                 }
                 cont.resume(list)
             },
@@ -63,7 +67,8 @@ class NetworkServiceAdapter constructor(context: Context) {
                         name = item.getString("name"),
                         image = item.getString("image"),
                         description = item.getString("description"),
-                        birthDate = item.getString("birthDate")  ))
+                        birthDate = item.getString("birthDate")  )
+                    )
                 }
                 cont.resume(list)
             },
@@ -84,7 +89,8 @@ class NetworkServiceAdapter constructor(context: Context) {
                         collectorId = item.getInt("id"),
                         name = item.getString("name"),
                         telephone = item.getString("telephone"),
-                        email = item.getString("email")  ))
+                        email = item.getString("email")  )
+                    )
                 }
                 cont.resume(list)
             },
@@ -92,7 +98,7 @@ class NetworkServiceAdapter constructor(context: Context) {
                 cont.resumeWithException(it)
             }))
     }
-    fun getAlbumById(albumId:Int, onComplete:(resp:Album)->Unit, onError: (error:VolleyError)->Unit){
+    fun getAlbumById(albumId:Int, onComplete:(resp: Album)->Unit, onError: (error:VolleyError)->Unit){
         requestQueue.add(getRequest("albums",
             { response ->
                 val resp = JSONObject(response)
@@ -104,7 +110,7 @@ class NetworkServiceAdapter constructor(context: Context) {
             }))
     }
 
-    fun getMusicianById(musicianId:Int, onComplete:(resp:Musician)->Unit, onError: (error:VolleyError)->Unit){
+    fun getMusicianById(musicianId:Int, onComplete:(resp: Musician)->Unit, onError: (error:VolleyError)->Unit){
         requestQueue.add(getRequest("musicians",
             { response ->
                 val resp = JSONObject(response)

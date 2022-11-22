@@ -10,12 +10,9 @@ import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.example.vinyls.R
 import com.example.vinyls.databinding.FragmentMusicianListBinding
-import com.example.vinyls.models.Album
 import com.example.vinyls.models.Musician
-import com.example.vinyls.models.MusicianAdapter
-import com.example.vinyls.viewmodels.AlbumListViewModel
+import com.example.vinyls.models.adapter.MusicianAdapter
 import com.example.vinyls.viewmodels.MusicianListViewModel
 
 @Suppress("DEPRECATION")

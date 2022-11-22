@@ -10,10 +10,9 @@ import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.example.vinyls.R
 import com.example.vinyls.databinding.FragmentAlbumListBinding
 import com.example.vinyls.models.Album
-import com.example.vinyls.models.AlbumsAdapter
+import com.example.vinyls.models.adapter.AlbumsAdapter
 import com.example.vinyls.viewmodels.AlbumListViewModel
 
 

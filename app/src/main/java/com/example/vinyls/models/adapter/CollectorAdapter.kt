@@ -1,13 +1,13 @@
-package com.example.vinyls.models
+package com.example.vinyls.models.adapter
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.annotation.LayoutRes
 import androidx.databinding.DataBindingUtil
-import androidx.databinding.ViewDataBinding
 import androidx.recyclerview.widget.RecyclerView
 import com.example.vinyls.R
 import com.example.vinyls.databinding.CollectorItemBinding
+import com.example.vinyls.models.Collector
 
 
 class CollectorAdapter : RecyclerView.Adapter<CollectorAdapter.CollectorViewHolder>(){
@@ -27,7 +27,7 @@ class CollectorAdapter : RecyclerView.Adapter<CollectorAdapter.CollectorViewHold
         return CollectorViewHolder(withDataBinding)
     }
 
-    override fun onBindViewHolder(holder: CollectorAdapter.CollectorViewHolder, position: Int) {
+    override fun onBindViewHolder(holder: CollectorViewHolder, position: Int) {
         holder.viewDataBinding.also {
             it.collector = collectors[position]
         }

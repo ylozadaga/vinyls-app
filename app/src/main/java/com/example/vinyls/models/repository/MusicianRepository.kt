@@ -1,9 +1,8 @@
-package com.example.vinyls.models
+package com.example.vinyls.models.repository
 
 import android.app.Application
-import com.android.volley.VolleyError
 import com.example.vinyls.models.Musician
-import com.example.vinyls.models.NetworkServiceAdapter
+import com.example.vinyls.models.networkAdapter.NetworkServiceAdapter
 
 
 class MusicianRepository (val application: Application){

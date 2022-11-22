@@ -3,11 +3,8 @@ package com.example.vinyls.viewmodels
 import android.app.Application
 import androidx.lifecycle.*
 import com.example.vinyls.models.Collector
-import com.example.vinyls.models.Musician
-import com.example.vinyls.models.NetworkServiceAdapter
 import android.util.Log
-import com.example.vinyls.models.CollectorRepository
-import com.example.vinyls.models.MusicianRepository
+import com.example.vinyls.models.repository.CollectorRepository
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
