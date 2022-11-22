@@ -20,6 +20,6 @@ https://github.com/ylozadaga/vinyls-app/releases/tag/v2.0
 https://github.com/ylozadaga/vinyls-app/releases/download/v1.0/VinylsApp_S1.apk
 
 # Release V2.0
-https://github.com/ylozadaga/vinyls-app/releases/download/v1.0/VinylsApp_S1.apk
+https://github.com/ylozadaga/vinyls-app/releases/download/v2.0/VinylsApp_S2.apk
 - Instalar la aplicación
 
