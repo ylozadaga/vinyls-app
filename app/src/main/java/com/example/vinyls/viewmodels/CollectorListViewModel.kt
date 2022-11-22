@@ -5,8 +5,16 @@ import androidx.lifecycle.*
 import com.example.vinyls.models.Collector
 import com.example.vinyls.models.Musician
 import com.example.vinyls.models.NetworkServiceAdapter
+import android.util.Log
+import com.example.vinyls.models.CollectorRepository
+import com.example.vinyls.models.MusicianRepository
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.launch
+import kotlinx.coroutines.withContext
+
 
 class CollectorListViewModel (application: Application) : AndroidViewModel(application)  {
+    private val collectorRepository = CollectorRepository(application)
 
     private val _collectors = MutableLiveData<List<Collector>>()
 
@@ -28,13 +36,20 @@ class CollectorListViewModel (application: Application) : AndroidViewModel(appli
     }
 
     private fun refreshDataFromNetwork() {
-        NetworkServiceAdapter.getInstance(getApplication()).getCollectors({
-            _collectors.postValue(it)
-            _eventNetworkError.value = false
-            _isNetworkErrorShown.value = false
-        },{
-            _eventNetworkError.value = true
-        })
+        try {
+            viewModelScope.launch(Dispatchers.Default) {
+                withContext(Dispatchers.IO) {
+                    var data = collectorRepository.refreshData()
+                    _collectors.postValue(data)
+                }
+                _eventNetworkError.postValue(false)
+                _isNetworkErrorShown.postValue(false)
+            }
+        }
+        catch (e:Exception){ //se procesa la excepcion
+            Log.d("Error", e.toString())
+            _eventNetworkError.postValue(true)
+        }
     }
 
     fun onNetworkErrorShown(){
