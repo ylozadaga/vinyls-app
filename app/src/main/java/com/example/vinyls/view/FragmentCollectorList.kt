@@ -10,15 +10,11 @@ import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.example.vinyls.R
 import com.example.vinyls.databinding.FragmentCollectorListBinding
-import com.example.vinyls.databinding.FragmentMusicianListBinding
 import com.example.vinyls.models.Collector
-import com.example.vinyls.models.CollectorAdapter
-import com.example.vinyls.models.Musician
-//import com.example.vinyls.models.MusicianAdapter
+import com.example.vinyls.models.adapter.CollectorAdapter
+//import com.example.vinyls.models.adapter.MusicianAdapter
 import com.example.vinyls.viewmodels.CollectorListViewModel
-import com.example.vinyls.viewmodels.MusicianListViewModel
 
 class FragmentCollectorList : Fragment() {
     private var _binding: FragmentCollectorListBinding? = null

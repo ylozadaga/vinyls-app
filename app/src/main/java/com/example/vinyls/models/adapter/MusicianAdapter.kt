@@ -1,4 +1,4 @@
-package com.example.vinyls.models
+package com.example.vinyls.models.adapter
 
 import android.view.LayoutInflater
 import android.view.ViewGroup

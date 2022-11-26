@@ -1,4 +1,4 @@
-package com.example.vinyls.models
+package com.example.vinyls.models.adapter
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
@@ -12,6 +12,7 @@ import com.bumptech.glide.load.engine.DiskCacheStrategy
 import com.bumptech.glide.request.RequestOptions
 import com.example.vinyls.R
 import com.example.vinyls.databinding.AlbumItemBinding
+import com.example.vinyls.models.Album
 import com.example.vinyls.view.FragmentAlbumListDirections
 
 
