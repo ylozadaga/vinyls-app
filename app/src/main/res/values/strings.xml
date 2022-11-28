@@ -5,7 +5,7 @@
     <string name="texto_usuario">VISITANTE</string>
     <string name="texto_coleccionista">COLECCIONISTA</string>
     <string name="texto_coleccionista_lowcase">Coleccionista</string>
-    <string name="texto_albumes_lowcase">Albumes</string>
+    <string name="texto_albumes_lowcase">Álbumes</string>
     <string name="texto_musician_lowcase">Artistas</string>
     <string name="texto_collector_lowcase">Coleccionistas</string>
     <string name="texto_visitante_lowcase">Visitante</string>
@@ -15,14 +15,17 @@
     <string name="text_album_descripcion">Descripción</string>
     <string name="texto_viniloApp">ViniloApp</string>
     <string name="texto_visitante">visitante</string>
-    <string name="text_album">Albumes</string>
+    <string name="text_album">Álbumes</string>
     <string name="text_artista">"Artista</string>
     <string name="c_mo_deseas_ingresar">¿Cómo deseas ingresar?</string>
     <string name="bienvenid_a">Bienvenid@ a</string>
-    <string name="albums_string">Albumes</string>
+    <string name="albums_string">Álbumes</string>
     <string name="crear_album_string">Crear Álbum</string>
     <string name="artistas_string">Artistas</string>
     <string name="coleccionistas_string">Coleccionistas</string>
+    <string name="ir_a_home">Ir a home</string>
+    <string name="imagen_album">Imagen álbum</string>
+    <string name="nombre_label">Nombre</string>
 
 
 </resources>
