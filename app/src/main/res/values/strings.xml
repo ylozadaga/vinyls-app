@@ -11,6 +11,8 @@
     <string name="texto_visitante_lowcase">Visitante</string>
     <string name="text_usuario">VISITANTE</string>
     <string name="text_album_genero">Género</string>
+    <string name="text_collector_telephone">Teléfono</string>
+    <string name="text_collector_email">Correo</string>
     <string name="text_album_fecha">Fecha</string>
     <string name="text_album_descripcion">Descripción</string>
     <string name="texto_viniloApp">ViniloApp</string>

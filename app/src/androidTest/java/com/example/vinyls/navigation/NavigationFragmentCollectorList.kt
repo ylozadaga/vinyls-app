@@ -12,19 +12,16 @@ import androidx.test.espresso.action.ViewActions
 import androidx.test.espresso.assertion.ViewAssertions
 import androidx.test.espresso.contrib.RecyclerViewActions
 import androidx.test.espresso.matcher.ViewMatchers
-import androidx.test.ext.junit.runners.AndroidJUnit4
 import com.example.vinyls.R
-import com.example.vinyls.view.FragmentAlbumList
+import com.example.vinyls.view.FragmentCollectorList
 import org.hamcrest.Matchers
 import org.junit.Assert
 import org.junit.Before
 import org.junit.Test
-import org.junit.runner.RunWith
 
-@RunWith(AndroidJUnit4::class)
-class NavigationFragmentAlbumsList {
+class NavigationFragmentCollectorList {
     lateinit var navController: TestNavHostController
-    lateinit var homeMenuScenario : FragmentScenario<FragmentAlbumList>
+    lateinit var homeMenuScenario : FragmentScenario<FragmentCollectorList>
 
     @Before
     fun setup(){
@@ -42,19 +39,19 @@ class NavigationFragmentAlbumsList {
         }
     }
     @Test
-    fun navigate_to_album_detail(){
-        SystemClock.sleep(2000);
-        Espresso.onView(ViewMatchers.withId(R.id.albumsRv)).perform(
+    fun navigate_to_collector_detail(){
+        SystemClock.sleep(2000)
+        Espresso.onView(ViewMatchers.withId(R.id.collectorRv)).perform(
             RecyclerViewActions.actionOnItemAtPosition<RecyclerView.ViewHolder>(
                 0, ViewActions.click()
             )
         )
-        Assert.assertEquals(navController.currentDestination?.id, R.id.fragmentAlbumDetail)
+        Assert.assertEquals(navController.currentDestination?.id, R.id.fragmentCollectorDetail)
     }
     @Test
     fun check_textview_top(){
-        Espresso.onView(ViewMatchers.withId(R.id.textViewAlbums))
-            .check(ViewAssertions.matches(ViewMatchers.withText(Matchers.containsString("Albumes"))))
+        Espresso.onView(ViewMatchers.withId(R.id.textViewCollector))
+            .check(ViewAssertions.matches(ViewMatchers.withText(Matchers.containsString("Coleccionistas"))))
 
     }
 }

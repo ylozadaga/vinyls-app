@@ -67,7 +67,7 @@ class NetworkServiceAdapter constructor(context: Context) {
                         name = item.getString("name"),
                         image = item.getString("image"),
                         description = item.getString("description"),
-                        birthDate = item.getString("birthDate")  )
+                        birthDate = item.getString("birthDate"))
                     )
                 }
                 cont.resume(list)
@@ -89,7 +89,7 @@ class NetworkServiceAdapter constructor(context: Context) {
                         collectorId = item.getInt("id"),
                         name = item.getString("name"),
                         telephone = item.getString("telephone"),
-                        email = item.getString("email")  )
+                        email = item.getString("email"))
                     )
                 }
                 cont.resume(list)
