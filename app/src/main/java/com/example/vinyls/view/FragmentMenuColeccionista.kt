@@ -19,6 +19,10 @@ class FragmentMenuColeccionista : Fragment(R.layout.fragment_menu_coleccionista)
         buttonAlbums.setOnClickListener {
             findNavController().navigate(R.id.action_fragmentMenuColeccionista_to_fragmentAlbumList)
         }
+
+        buttonCreateAlbum.setOnClickListener {
+            findNavController().navigate(R.id.action_fragmentMenuColeccionista_to_fragmentAlbumCreate)
+        }
     }
 
 
