@@ -122,9 +122,27 @@ app:destination="@id/fragmentMenuInicial"/>
     <fragment
         android:id="@+id/fragmentCollectorList"
         android:name="com.example.vinyls.view.FragmentCollectorList"
-        tools:layout="@layout/fragment_collector_list" />
+        tools:layout="@layout/fragment_collector_list" >
 
+    </fragment>
+    <action
+        android:id="@+id/action_fragmentCollectorList_to_fragmentCollectorDetail"
+        app:destination="@id/fragmentCollectorDetail" />
 
+    <fragment
+        android:id="@+id/fragmentCollectorDetail"
+        android:name="com.example.vinyls.view.FragmentCollectorDetail"
+        tools:layout="@layout/fragment_collector_detail" >
+        <argument
+            android:name="name"
+            app:argType="string" />
+        <argument
+            android:name="telephone"
+            app:argType="string" />
+        <argument
+            android:name="email"
+            app:argType="string" />
+    </fragment>
 
 </navigation>
 
