@@ -28,6 +28,18 @@
     <string name="ir_a_home">Ir a home</string>
     <string name="imagen_album">Imagen álbum</string>
     <string name="nombre_label">Nombre</string>
+    <string name="name_create_album">Nombre</string>
+    <string name="portada_create_album">URL Portada</string>
+    <string name="release_date_create_album">Fecha de lanzamiento</string>
+    <string name="description_create_album">Descripción</string>
+    <string name="toggle_salsa">Salsa</string>
+    <string name="toggle_rock">Rock</string>
+    <string name="toggle_folk">Folk</string>
+    <string name="text_view_genre_create_album">Género</string>
+    <string name="recordLabel_create_album">Discográfica</string>
+    <string name="button_create_album">Crear</string>
+    <string name="create_album_label">Crear álbum</string>
+    <string name="required">Requerido</string>
 
 
 </resources>
