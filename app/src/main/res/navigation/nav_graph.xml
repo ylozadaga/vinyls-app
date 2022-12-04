@@ -137,6 +137,24 @@ app:destination="@id/fragmentMenuInicial"/>
         android:name="com.example.vinyls.view.FragmentAlbumCreate"
         tools:layout="@layout/fragment_album_create" />
 
+    <action
+        android:id="@+id/action_fragmentCollectorList_to_fragmentCollectorDetail"
+        app:destination="@id/fragmentCollectorDetail" />
+
+    <fragment
+        android:id="@+id/fragmentCollectorDetail"
+        android:name="com.example.vinyls.view.FragmentCollectorDetail"
+        tools:layout="@layout/fragment_collector_detail" >
+        <argument
+            android:name="name"
+            app:argType="string" />
+        <argument
+            android:name="telephone"
+            app:argType="string" />
+        <argument
+            android:name="email"
+            app:argType="string" />
+    </fragment>
 
 </navigation>
 
