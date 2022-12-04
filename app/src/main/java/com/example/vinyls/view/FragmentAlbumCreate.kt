@@ -160,6 +160,45 @@ class FragmentAlbumCreate : Fragment() {
             }else{
                 tiNameCreateAlbum.error = null
             }
+            if(tbGenre.checkedButtonId==-1){
+                isValid = false
+                tvGenreCreateAlbum.error = "Campo requerido"
+            }else{
+                tvGenreCreateAlbum.error = null
+            }
+            if(etReleaseDateCreateAlbum.text.toString().matches(".*[A-Z].*".toRegex()) || etReleaseDateCreateAlbum.text.toString().matches(".*[a-z].*".toRegex())){
+               isValid = false
+                tiReleaseDateCreateAlbum.error = "Datos incorrectos de fecha"
+            }
+            else{
+                tiReleaseDateCreateAlbum.error = null
+            }
+            if(etDescriptionCreateAlbum.text.toString().isEmpty()){
+                isValid = false
+                tiDescriptionCreateAlbum.error = "Campo requerido"
+            }else{
+                tiDescriptionCreateAlbum.error = null
+            }
+            if(etRecordLabelCreateAlbum.text.toString().isEmpty()){
+                isValid = false
+                tiRecordLabelCreateAlbum.error = "Campo requerido"
+            }else{
+                tiRecordLabelCreateAlbum.error = null
+            }
+            if(etCoverCreateAlbum.text.toString().isEmpty()){
+                isValid = false
+                tiCoverCreateAlbum.error = "Campo requerido"
+            }else{
+                tiCoverCreateAlbum.error = null
+            }
+            if(etReleaseDateCreateAlbum.text.toString().isEmpty()){
+                isValid = false
+                tiReleaseDateCreateAlbum.error = "Campo requerido"
+            }else{
+                tiReleaseDateCreateAlbum.error = null
+            }
+            
+
 
 
 

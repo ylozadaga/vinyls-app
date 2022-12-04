@@ -37,6 +37,7 @@
     <string name="recordLabel_create_album">Discográfica</string>
     <string name="button_create_album">Crear</string>
     <string name="create_album_label">Crear álbum</string>
+    <string name="required">Requerido</string>
 
 
 </resources>

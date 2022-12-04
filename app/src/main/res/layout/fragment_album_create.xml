@@ -43,6 +43,10 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="@string/name_create_album"
+            app:helperText="@string/required"
+            app:helperTextTextColor="@color/fontOrange"
+            app:counterEnabled="true"
+            app:counterMaxLength="20"
             app:endIconMode="clear_text">
 
             <com.google.android.material.textfield.TextInputEditText
@@ -60,6 +64,10 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="@string/portada_create_album"
+            app:helperText="@string/required"
+            app:helperTextTextColor="@color/fontOrange"
+            app:counterEnabled="true"
+            app:counterMaxLength="100"
             app:endIconMode="clear_text">
 
             <com.google.android.material.textfield.TextInputEditText
@@ -77,6 +85,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="@string/release_date_create_album"
+            app:helperText="@string/required"
+            app:helperTextTextColor="@color/fontOrange"
             app:endIconMode="clear_text">
 
             <com.google.android.material.textfield.TextInputEditText
@@ -94,6 +104,10 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="@string/description_create_album"
+            app:helperText="@string/required"
+            app:counterEnabled="true"
+            app:counterMaxLength="200"
+            app:helperTextTextColor="@color/fontOrange"
             app:endIconMode="clear_text">
 
             <com.google.android.material.textfield.TextInputEditText
@@ -111,6 +125,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="@string/recordLabel_create_album"
+            app:helperText="@string/required"
+            app:helperTextTextColor="@color/fontOrange"
             app:endIconMode="clear_text">
 
             <com.google.android.material.textfield.TextInputEditText
@@ -130,6 +146,8 @@
             android:paddingTop="10dp"
             android:paddingRight="10dp"
             android:text="@string/text_view_genre_create_album"
+            app:helperText="@string/required"
+            app:helperTextTextColor="@color/fontOrange"
             android:textSize="20sp" />
 
         <com.google.android.material.button.MaterialButtonToggleGroup
