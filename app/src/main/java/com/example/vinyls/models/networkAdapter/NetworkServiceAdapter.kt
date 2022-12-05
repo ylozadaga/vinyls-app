@@ -54,6 +54,23 @@ class NetworkServiceAdapter constructor(context: Context) {
                 cont.resumeWithException(it)
             }))
     }
+
+    suspend fun createAlbum(body: JSONObject) = suspendCoroutine<Album> { cont ->
+        requestQueue.add(postRequest("albums", body,
+            {  response ->
+                val album = Album(albumId = response.getInt("id"),
+                                name = response.getString("name"),
+                                cover = response.getString("cover"),
+                                recordLabel = response.getString("recordLabel"),
+                                releaseDate = response.getString("releaseDate"),
+                                genre = response.getString("genre"),
+                                description = response.getString("description"))
+                cont.resume(album)
+            },{
+                cont.resumeWithException(it)
+            }))
+    }
+
     suspend fun getMusicians() = suspendCoroutine<List<Musician>>{ cont ->
         requestQueue.add(getRequest("musicians",
             { response ->
@@ -67,7 +84,7 @@ class NetworkServiceAdapter constructor(context: Context) {
                         name = item.getString("name"),
                         image = item.getString("image"),
                         description = item.getString("description"),
-                        birthDate = item.getString("birthDate")  )
+                        birthDate = item.getString("birthDate"))
                     )
                 }
                 cont.resume(list)
@@ -89,7 +106,7 @@ class NetworkServiceAdapter constructor(context: Context) {
                         collectorId = item.getInt("id"),
                         name = item.getString("name"),
                         telephone = item.getString("telephone"),
-                        email = item.getString("email")  )
+                        email = item.getString("email"))
                     )
                 }
                 cont.resume(list)
