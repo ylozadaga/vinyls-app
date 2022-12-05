@@ -40,6 +40,11 @@
     <string name="button_create_album">Crear</string>
     <string name="create_album_label">Crear álbum</string>
     <string name="required">Requerido</string>
+    <string name="sony_music_label">Sony Music</string>
+    <string name="emi_label">EMI</string>
+    <string name="discos_fuentes_label">Discos Fuentes</string>
+    <string name="elektra_label">Elektra</string>
+    <string name="fania_records_label">Fania Records</string>
 
 
 </resources>
