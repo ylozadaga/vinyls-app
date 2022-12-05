@@ -18,7 +18,7 @@
         android:fontFamily="sans-serif-medium"
         android:text="@string/texto_collector_lowcase"
         android:textAlignment="center"
-        android:textColor="@color/fontTextNormal"
+        android:textColor="@color/white"
         android:textSize="20sp"
         android:textStyle="italic"
         app:layout_constraintEnd_toEndOf="parent"
