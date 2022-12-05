@@ -17,7 +17,7 @@
         android:layout_marginTop="36dp"
         android:fontFamily="sans-serif-medium"
         android:text="@string/bienvenid_a"
-        android:textColor="@color/fontTextNormal"
+        android:textColor="@color/white"
         android:textSize="20sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -44,7 +44,7 @@
         android:layout_marginTop="220dp"
         android:text="@string/c_mo_deseas_ingresar"
         android:textAlignment="center"
-        android:textColor="@color/fontTextNormal"
+        android:textColor="@color/white"
         android:textSize="24sp"
         app:layout_constraintTop_toTopOf="parent"
         tools:layout_editor_absoluteX="28dp" />
