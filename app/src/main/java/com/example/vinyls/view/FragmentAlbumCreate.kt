@@ -15,7 +15,6 @@ import com.example.vinyls.R
 import com.example.vinyls.databinding.FragmentAlbumCreateBinding
 import com.example.vinyls.viewmodels.AlbumCreateViewModel
 import com.google.android.material.snackbar.Snackbar
-import kotlinx.android.synthetic.main.fragment_album_create.*
 import kotlinx.coroutines.async
 import kotlinx.coroutines.launch
 import org.json.JSONObject
@@ -130,7 +129,7 @@ class FragmentAlbumCreate : Fragment() {
                     "\",\n  \"genre\": \"" +
                     getGenre() +
                     "\",\n  \"recordLabel\": \"" +
-                    getRecordLabel() +
+                    binding.etRecordLabelCreateAlbum.text.toString() +
                     "\"\n}"
             Log.i("data Captured",strAlbum)
 
@@ -167,12 +166,6 @@ class FragmentAlbumCreate : Fragment() {
             }else{
                 tvGenreCreateAlbum.error = null
             }
-            if(rgRecordLabelCreateAlbum.checkedRadioButtonId==-1){
-                isValid = false
-                tvRecordLabelCreateAlbum.error = "Campo requerido"
-            }else{
-                tvGenreCreateAlbum.error = null
-            }
             if(etReleaseDateCreateAlbum.text.toString().matches(".*[A-Z].*".toRegex()) || etReleaseDateCreateAlbum.text.toString().matches(".*[a-z].*".toRegex())){
                isValid = false
                 tiReleaseDateCreateAlbum.error = "Datos incorrectos de fecha"
@@ -186,7 +179,12 @@ class FragmentAlbumCreate : Fragment() {
             }else{
                 tiDescriptionCreateAlbum.error = null
             }
-
+            if(etRecordLabelCreateAlbum.text.toString().isEmpty()){
+                isValid = false
+                tiRecordLabelCreateAlbum.error = "Campo requerido"
+            }else{
+                tiRecordLabelCreateAlbum.error = null
+            }
             if(etCoverCreateAlbum.text.toString().isEmpty()){
                 isValid = false
                 tiCoverCreateAlbum.error = "Campo requerido"
@@ -216,20 +214,6 @@ class FragmentAlbumCreate : Fragment() {
                 R.id.btnSalsa -> btnSalsa.text.toString()
                 R.id.btnRock -> btnRock.text.toString()
                 else -> btnFolk.text.toString()
-            }
-        }
-
-    }
-
-    private fun getRecordLabel(): String {
-        with(binding){
-            return when(rgRecordLabelCreateAlbum.checkedRadioButtonId){
-                R.id.btnSonyMusicLabel -> btnSonyMusicLabel.text.toString()
-                R.id.btnEmi -> btnEmi.text.toString()
-                R.id.btnDiscosFuentes -> btnDiscosFuentes.text.toString()
-                R.id.btnElektra -> btnElektra.text.toString()
-                else -> btnFaniaRecords.text.toString()
-
             }
         }
 

@@ -41,14 +41,12 @@
         android:id="@+id/tvTelephone"
         android:layout_width="175dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="36dp"
+        android:layout_marginTop="35dp"
         android:layout_marginEnd="25dp"
         android:gravity="end"
         android:textColor="@color/white"
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.727"
-        app:layout_constraintStart_toEndOf="@+id/tvTelephoneLabel"
         app:layout_constraintTop_toBottomOf="@+id/tvNameCollector" />
 
     <TextView
@@ -67,15 +65,14 @@
         android:id="@+id/tvEmailCollector"
         android:layout_width="175dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="100dp"
+        android:layout_marginTop="35dp"
         android:layout_marginEnd="25dp"
         android:gravity="end"
         android:textColor="@color/white"
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.795"
-        app:layout_constraintStart_toEndOf="@+id/tvEmailLabel"
-        app:layout_constraintTop_toBottomOf="@+id/tvNameCollector" />
+        app:layout_constraintTop_toBottomOf="@+id/tvTelephone" />
+
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
