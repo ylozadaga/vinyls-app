@@ -208,9 +208,9 @@
                 android:paddingTop="10dp"
                 android:paddingRight="10dp"
                 android:text="@string/text_view_genre_create_album"
+                android:textSize="20sp"
                 app:helperText="@string/required"
-                app:helperTextTextColor="@color/fontOrange"
-                android:textSize="20sp" />
+                app:helperTextTextColor="@color/fontOrange" />
 
             <com.google.android.material.button.MaterialButtonToggleGroup
                 android:id="@+id/tbGenre"
